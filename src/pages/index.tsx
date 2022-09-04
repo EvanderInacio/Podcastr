@@ -3,6 +3,6 @@ import React from "react"
 
 export default function Home() {
   return (
-    <h1>index</h1>
+    <img src="/index.png" alt="" />
   )
 }
