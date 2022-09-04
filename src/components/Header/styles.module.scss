@@ -21,15 +21,25 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 994px) {
   .headerContainer {
     display: flex;
     flex-direction: column;
-    height: 8.5rem;
+    height: 7rem;
+    
+
     padding: 1rem;
 
-    span {
+    img {
       margin-top: 1rem;
+    }
+
+    p {
+      border-left: none;
+    }
+
+    span {
+      margin-top: -6rem;
       margin-left: auto
     }
   }
