@@ -18,20 +18,21 @@
   span {
     margin-left: auto;
     text-transform: capitalize;
+    display: block;
   }
 }
 
+
 @media (max-width: 994px) {
   .headerContainer {
-    display: flex;
-    flex-direction: column;
-    height: 7rem;
-    
-
+    display: grid;
+    grid-area: span;
     padding: 1rem;
+    height: 6rem;
+
 
     img {
-      margin-top: 1rem;
+      width: 9rem;
     }
 
     p {
@@ -39,8 +40,7 @@
     }
 
     span {
-      margin-top: -6rem;
-      margin-left: auto
+      margin-top: -8rem;
     }
   }
 }

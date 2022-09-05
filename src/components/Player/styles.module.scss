@@ -93,11 +93,10 @@
 }
 
 
-
 @media (max-width: 768px) {
   .playerContainer {
     width: 100vw;
-    height: 15rem;
+    height: 14rem;
     position: absolute;
     bottom: 0;
     z-index: 100;
@@ -111,13 +110,9 @@
   }
 
     .emptyPlayer {
-      width: 20rem;
-      height: 3rem;
-      margin-bottom: 1rem;
-  
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 15rem;
+      height: 2rem;
+      margin-bottom: 1rem;     
     }
   
 }
