@@ -4,11 +4,18 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { api } from '../services/api'
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeSting'
 
+import styles from './home.module.scss'
+
 type Episode = {
   id: string
   title: string
+  thumbnail: string
+  description: string
+  duration: number
   members: string
-  published_at: string
+  durationAsString: string
+  url: string
+  publishedAt: string
 }
 
 type HomeProps = {
@@ -21,9 +28,8 @@ export default function Home(props: HomeProps) {
 
   
   return (
-    <div>
-      <img src="/index.png" alt="" />
-      {/* <p>{JSON.stringify(props.episodes)}</p> */}
+    <div className={styles.homepage}>
+
     </div>
   )
 }
