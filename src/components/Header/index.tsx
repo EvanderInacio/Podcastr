@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react"
 import format from 'date-fns/format'
 import ptBR from 'date-fns/locale/pt-BR'
@@ -9,10 +10,9 @@ export function Header() {
     locale: ptBR,
   })
 
-
   return(
     <header className={styles.headerContainer}>
-      <img src="/logo.svg" alt="Podcast" />
+      <img src='/logo.svg' alt="Podcast" />
 
       <p>O melhor para você ouvir, sempre</p>
 
