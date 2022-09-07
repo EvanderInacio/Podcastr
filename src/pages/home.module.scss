@@ -1,5 +1,5 @@
 .homepage {
-  padding: 0 1rem;
+  padding: 0 0.4rem;
   height: calc(100vh - 6.5rem);
   overflow-y: scroll;
   padding-bottom: 2rem;
@@ -195,6 +195,7 @@
       width: 90vw;
       display: flex;
       flex-direction: column;
+      padding-left: 1rem;
       justify-content: center;
       align-items: center;
     }

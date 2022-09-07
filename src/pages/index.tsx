@@ -37,7 +37,6 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
   const episodeList = [...latestEpisodes, ...allEpisodes]
 
   return (
-    <>
       <div className={styles.homepage}>
 
       <Head>
@@ -135,7 +134,6 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
           </table>
         </section>
       </div>
-    </>
   )
 }
 
