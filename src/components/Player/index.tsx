@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
@@ -110,14 +111,14 @@ export function Player() {
 
         { episode && (
           <audio
-            src={episode.url}
-            autoPlay
-            ref={audioRef}
-            loop={isLooping}
-            onEnded={handleEpisodeEnded}
-            onPlay={() => setPlayingState(true)}
-            onPause={() => setPlayingState(false)}
-            onLoadedMetadata={setupProgressListener}
+          src={episode?.url}
+          ref={audioRef}
+          autoPlay
+          onEnded={handleEpisodeEnded}
+          loop={isLooping}
+          onPlay={() => setPlayingState(true)}
+          onPause={() => setPlayingState(false)}
+          onLoadedMetadata={setupProgressListener}
           />
         )}
 
