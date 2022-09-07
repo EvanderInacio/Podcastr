@@ -4,7 +4,12 @@
 
 <br>
 
-![Resultado final do projeto]()
+### Página Inicial. 
+![Resultado final do projeto](https://raw.githubusercontent.com/EvanderInacio/Podcastr/main/public/Home-preview.png)
+
+### Detalhes dos episódios. 
+
+![Resultado final do projeto](https://raw.githubusercontent.com/EvanderInacio/Podcastr/main/public/Details-preview.png)
 
 <br>
 
