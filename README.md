@@ -4,18 +4,17 @@
 
 <br>
 
-### Página Inicial. 
 ![Resultado final do projeto](https://raw.githubusercontent.com/EvanderInacio/Podcastr/main/public/Home-preview.png)
-
-### Detalhes dos episódios. 
-
-![Resultado final do projeto](https://raw.githubusercontent.com/EvanderInacio/Podcastr/main/public/Details-preview.png)
 
 <br>
 
 ## 📝 Descrição 
 
-Podcastr é uma plataforma construída para transmissão de podcast.  
+Podcastr é uma plataforma construída para transmissão de podcast.
+
+### **Website: [podcastr-evander.vercel.app](https://podcastr-evander.vercel.app/)**
+
+<br>
 
 ## 🚀 Tecnologias
 
