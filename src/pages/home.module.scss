@@ -2,6 +2,17 @@
   padding: 0 1rem;
   height: calc(100vh - 6.5rem);
   overflow-y: scroll;
+  padding-bottom: 2rem;
+
+  &::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: var(--gray-100);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-800);
+    border-radius: 0.2rem;
+  }
 
   h2 {
     margin-top: 3rem;
@@ -176,12 +187,12 @@
 
 @media(max-width:767px) {
   .homepage{
-    padding: 0.8rem;
+    padding-bottom: 10rem;
   }
 
   .latestEpisodes{
     ul {
-      width: 93vw;
+      width: 90vw;
       display: flex;
       flex-direction: column;
       justify-content: center;

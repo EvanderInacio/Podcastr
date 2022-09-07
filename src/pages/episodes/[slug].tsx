@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR'
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 
-import { useRouter } from 'next/router'
-import next, { GetStaticPaths, GetStaticProps } from 'next';
+import { usePlayer } from '../../contexts/PlayerContext';
 
 import { api } from '../../services/api';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeSting';
@@ -22,14 +23,14 @@ type Episode = {
   url: string;
   publishedAt: string;
   description: string;
-};
+}
 
 type EpisodeProps = {
   episode: Episode;
 }
 
 export default function Episode({ episode }: EpisodeProps) {
-
+  const { play } = usePlayer()
 
   return (
     <div className={styles.episode}>
@@ -40,17 +41,17 @@ export default function Episode({ episode }: EpisodeProps) {
       <div className={styles.thumbnailContainer}>
         <Link href="/">
           <button type="button">
-            <img src="/arrow-left.svg" alt="Voltar" />
+            <img src="/arrow-left.svg" alt="Voltar"/>
           </button>
         </Link>
         <Image
           width={700}
           height={160}
-          src ={episode.thumbnail}
+          src={episode.thumbnail}
           objectFit="cover"
         />
-        <button type="button" >
-          <img src="/play.svg" alt="Tocar episódio" />
+        <button type="button" onClick={() => play(episode)}>
+          <img src="/play.svg" alt="Tocar episódio"/>
         </button>
       </div>
 
@@ -61,10 +62,7 @@ export default function Episode({ episode }: EpisodeProps) {
         <span>{episode.durationAsString}</span>
       </header>
 
-      <div 
-        className={styles.description} 
-        dangerouslySetInnerHTML={{ __html: episode.description }}
-      />
+      <div className={styles.description} dangerouslySetInnerHTML={{ __html: episode.description }} />
     </div>
   )
 }
@@ -72,11 +70,11 @@ export default function Episode({ episode }: EpisodeProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await api.get('episodes', {
     params: {
-      _limit: 2,
-      _sort: 'published_at',
+      _limit: 12,
+      _sort: 'publised_at',
       _order: 'desc'
     }
-  })
+  });
 
   const paths = data.map(episode => {
     return {
@@ -93,7 +91,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const { slug } = ctx.params;
+  const { slug } = ctx.params
 
   const { data } = await api.get(`/episodes/${slug}`)
 
@@ -106,13 +104,13 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     duration: Number(data.file.duration),
     durationAsString: convertDurationToTimeString(Number(data.file.duration)),
     description: data.description,
-    url: data.file.url,
-  };
-
+    url: data.file.url
+  }
+  
   return {
     props: {
       episode,
     },
     revalidate: 60 * 60 * 24, // 24 hours
   }
-}
+} 

@@ -3,6 +3,10 @@
   padding: 3rem 2rem;
   margin: 0 auto;
 
+  height: calc(100vh - 6.5rem);
+  overflow-y: scroll;
+  padding-bottom: 10rem;
+
   .thumbnailContainer {
     position: relative;
 
@@ -82,5 +86,15 @@
     p {
       margin: 1.5rem 0;
     }
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: var(--gray-100);
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--purple-500);
+    border-radius: 0.7rem;
   }
 }
