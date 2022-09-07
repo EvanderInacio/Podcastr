@@ -24,6 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React
 - TypeScript
 - Next.js
+- Sass
 
 ## 💻 Começando
 
@@ -34,7 +35,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 **Clone o projeto e acesse a pasta**
 
 ```bash
-$ git clone https://github.com/josepholiveira/podcastr.git && cd podcastr
+$ git clone https://github.com/EvanderInacio/Podcastr.git && cd podcastr
 ```
 
 **Siga os passos abaixo**
