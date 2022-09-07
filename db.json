@@ -116,19 +116,6 @@
         "type": "audio/x-m4a",
         "duration": 1772
       }
-    },
-    {
-      "id": "estrategias-de-autenticacao-jwt-oauth",      
-      "title": "FalaDev #21 - Estratégias de autenticação, JWT, OAuth, qual usar?",
-      "members": "Diego Fernandes, Higo Ribeiro e Guilherme Pellizzetti",
-      "published_at": "2020-04-09 20:00:00",
-      "thumbnail": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/autenticacao.jpg",
-      "description": "<p>Três programadores conversam sobre estratégia de autenticação.</p><p>Vamos discutir quais aspectos você deve considerar na hora de fazer a sua escolha.</p><p>A gente passa a maior parte do tempo escrevendo código. Agora chegou o momento de falar sobre isso.</p>",
-      "file": {
-        "url": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/audios/autenticacao.m4a",
-        "type": "audio/x-m4a",
-        "duration": 1463
-      }
     }
   ]
 }
