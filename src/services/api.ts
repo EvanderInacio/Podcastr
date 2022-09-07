@@ -1,5 +1,10 @@
-import axios from "axios"
+import axios from 'axios'
+
+const baseURL =
+  process.env.ENV === 'dev'
+    ? 'http://localhost:3333'
+    : 'https://capelaum-json-server.herokuapp.com'
 
 export const api = axios.create({
-  baseURL: process.env.API_URL || 'http://localhost:3333'
+  baseURL
 })
