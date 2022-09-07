@@ -8,6 +8,7 @@ import { convertDurationToTimeString } from '../utils/convertDurationToTimeSting
 
 import styles from './home.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 type Episode = {
   id: string
@@ -26,10 +27,10 @@ type HomeProps = {
   allEpisodes: Episode[]
 }
  
- 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {  
   return (
-    <div className={styles.homepage}>
+    <>
+      <div className={styles.homepage}>
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
 
@@ -46,7 +47,9 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                 />
 
                 <div className={styles.episodeDetails}>
-                  <a href=''>{episode.title}</a>
+                  <Link href={`/episodes/${episode.id}`}>
+                    <a>{episode.title}</a>
+                  </Link>
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
                   <span>{episode.durationAsString}</span>
@@ -66,19 +69,21 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 
         <table cellSpacing={0}>
           <thead>
+            <tr>
             <th></th>
             <th>Podcast</th>
             <th>Integrantes</th>
             <th>Data</th>
             <th>Duração</th>
             <th></th>
+            </tr>
           </thead>
 
           <tbody>
             {allEpisodes.map(episode => {
                return (
                 <tr key={episode.id}>
-                  <td className={styles.mobile}>
+                  <td className={styles.mobile} style={{ width: 70}}>
                     <Image 
                       width={120}
                       height={120}
@@ -88,10 +93,17 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                     />
                   </td>
                   <td>
-                    <a href="">{episode.title}</a>
+                    <Link href={`/episodes/${episode.id}`}>
+                      <a>{episode.title}</a>  
+                    </Link>
                   </td>
                   <td className={styles.mobile}>{episode.members}</td>
-                  <td className={styles.mobile}>{episode.publishedAt}</td>
+                  <td 
+                    className={styles.mobile}
+                    style={{ width: 100}}
+                    >
+                      {episode.publishedAt}
+                    </td>
                   <td className={styles.mobile}>{episode.durationAsString}</td>
                   <td>
                     <button type="button">
@@ -104,7 +116,8 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
           </tbody>
         </table>
       </section>
-    </div>
+      </div>
+    </>
   )
 }
 
