@@ -2,6 +2,12 @@
   Podcastr 🎙️
 </h1>
 
+ <p align="center">
+  <img alt="Github Top Language" src="https://img.shields.io/github/languages/top/EvanderInacio/Podcastr?color=6529f0">
+  <img alt="Github Language Count" src="https://img.shields.io/github/languages/count/EvanderInacio/Podcastr?color=6529f0">
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/EvanderInacio/Podcastr?color=6529f0">
+</p>
+
 <br>
 
 ![Resultado final do projeto](https://raw.githubusercontent.com/EvanderInacio/Podcastr/main/public/Home-preview.png)
